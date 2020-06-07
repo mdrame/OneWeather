@@ -10,8 +10,14 @@ import Foundation
 
 struct WeatherData: Decodable {
     var main: Main
+    var name: String
+    var weather: [Weather]
 }
 
-struct Main: Decodable {
+ struct Main: Decodable {
     var temp: Double
+}
+
+  struct Weather: Decodable {
+    var description: String
 }
