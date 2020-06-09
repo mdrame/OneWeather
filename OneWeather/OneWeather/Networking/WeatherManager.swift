@@ -30,6 +30,7 @@ struct WeatherManager {
             let task = session.dataTask(with: url) { (data, urlResponse, error) in
                 if error != nil {
                     print("Return Call \(error!)")
+                    return
                 }
                 
                 if let safeData = data {
